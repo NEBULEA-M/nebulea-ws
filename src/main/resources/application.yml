@@ -6,3 +6,7 @@ logging:
     org:
       springframework:
         web: DEBUG
+
+ros-bridge:
+  url: ws://172.31.111.66:9090
+
