@@ -1,0 +1,26 @@
+ros-bridge:
+  url: ws://172.31.111.66:9090
+
+security:
+  oauth2:
+    provider:
+      google:
+        client-id: 368118052987-89r62sb15pbm7avbutmfa0djisnkqjts.apps.googleusercontent.com
+        client-secret: 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
+        scope:
+          - email
+          - profile
+          - openid
+        revoke-uri: https://oauth2.googleapis.com/revoke
+        token-info: https://oauth2.googleapis.com/tokeninfo
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres?currentSchema=nebulea-user
+    username: postgres
+    password: postgres
+    pool:
+      max-idle-time: 30000
+      max-life-time: 200000
+      max-size: 20
+      max-create-connection-time: 30000
